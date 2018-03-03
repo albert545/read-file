@@ -38,6 +38,11 @@ for d in data:
         good.append(d)
 print('共有',len(good),'筆留言中包含''good''')
 print(good[0])
+
+#list 清單快寫法
+good=[d for d in data if 'good' in d]
+print(len(good))
+
 #print(data[0])
 #print('---------------------------------')
 #print(data[2])
