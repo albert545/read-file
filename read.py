@@ -31,7 +31,13 @@ for d in data:
 print('共有',len(new),'筆留言小於100的長度')
 print(new[0])
 
-
+#留言包含"good"的留言、筆數
+good =[]
+for d in data:
+    if 'good' in d:
+        good.append(d)
+print('共有',len(good),'筆留言中包含''good''')
+print(good[0])
 #print(data[0])
 #print('---------------------------------')
 #print(data[2])
