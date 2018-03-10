@@ -47,3 +47,39 @@ print(len(good))
 #print('---------------------------------')
 #print(data[2])
 #print('---------------------------------')
+
+#文字計數器
+wc = {} #word_counts
+for d in data:
+    #words = d.split(' ')
+    words = d.split() #避免空字串''
+    for word in words:
+        if word in wc:
+            wc[word] += 1
+        else:
+            wc[word] = 1 #新增key進 WC 字典
+
+for word in wc:   #印出
+    if wc[word] > 1000000:
+        print(word,wc[word])
+
+print(len(wc))
+
+# 使用者輸入想查的字
+while True:
+    word = input('keyin your find words:')
+    if word == 'q':
+        break
+    if word in wc:
+        print(word,'show times is:', wc[word])
+    else:
+        print(' NoNNO')
+
+print('THK')
+
+
+
+
+
+
+
